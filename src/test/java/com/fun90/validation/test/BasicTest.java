@@ -1,9 +1,3 @@
-/*
- * 文件名：BasicTest.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
-
 package com.fun90.validation.test;
 
 import com.fun90.validation.BasicValidateService;
@@ -19,7 +13,7 @@ import java.util.Map;
 /**
  * 最基本的测试
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class BasicTest {
@@ -75,7 +69,7 @@ public class BasicTest {
         user.put("email", "okbeok#163.com");
 //        user.put("email", "okbeok@163.com");
         user.put("username", "admin");
-//        user.put("username", "xionglingcong");
+//        user.put("username", "fun90");
         user.put("password", "12345");
 //        user.put("passwordOne", "abcde");
 //        user.put("passwordOne", "12345");

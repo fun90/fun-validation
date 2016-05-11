@@ -1,8 +1,3 @@
-/*
- * 文件名：MaxValidator.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.validators;
 
 import com.fun90.validation.IValidator;
@@ -14,7 +9,7 @@ import org.apache.log4j.Logger;
 /**
  * 字符长度区间验证器
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class MaxValidator implements IValidator {
@@ -23,7 +18,7 @@ public class MaxValidator implements IValidator {
     @Override
     public boolean execute(Object data, Class<?> type, Object value, Rule rule) {
         if (value == null) return true;
-        int length = 0;
+        int length;
         if (ClassUtils.isAssignable(type, Object[].class)) {
             length = ((Object[]) value).length;
         } else if(StringUtils.isNumeric((String) value)) {

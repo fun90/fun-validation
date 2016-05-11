@@ -1,8 +1,3 @@
-/*
- * 文件名：MatchValidator.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.validators;
 
 import com.fun90.validation.IValidator;
@@ -14,7 +9,7 @@ import java.util.regex.Pattern;
 /**
  * 正则匹配
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class MatchValidator implements IValidator {

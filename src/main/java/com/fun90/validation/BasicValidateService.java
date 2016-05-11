@@ -1,8 +1,3 @@
-/*
- * 文件名：BasicValidateService.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation;
 
 import com.fun90.validation.config.Configuration;
@@ -13,7 +8,6 @@ import org.apache.commons.beanutils.PropertyUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,14 +15,14 @@ import java.util.Map;
 /**
  * 基础验证服务
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class BasicValidateService implements IValidateService {
     private static final Logger logger = LoggerFactory.getLogger(BasicValidateService.class);
 
-    private Configuration configuration;
-    boolean checkAll;
+    private final Configuration configuration;
+    private final boolean checkAll;
 
     public BasicValidateService(IValidateConfig config) {
         configuration = config.readConfiguration();
@@ -44,34 +38,41 @@ public class BasicValidateService implements IValidateService {
         Map<String, IValidator> validators = this.configuration.getValidators();
         if (validators == null || validators.isEmpty()) return results;
 
-        Iterator<Field> fs = fields.iterator();
-        while (fs.hasNext()) {
-            Field field = fs.next();
+        for (Field field : fields)
+        {
             String fname = field.getName();
             List<Rule> rules = field.getRules();
 
-            if (rules == null || rules.isEmpty()) continue;
+            if (rules == null || rules.isEmpty())
+                continue;
 
             Object value = null;
             Class<?> type = null;
-            try {
+            try
+            {
                 value = PropertyUtils.getProperty(object, fname);
                 type = value == null ? null : value.getClass();
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 logger.warn(e.getMessage(), e);
             }
 
-            for (Rule rule : rules) {
+            for (Rule rule : rules)
+            {
                 String rname = rule.getName();
                 IValidator validator = validators.get(rname);
-                if (validator == null) {
+                if (validator == null)
+                {
                     logger.warn("the validator isn't exsit. name: " + rname);
                     continue;
                 }
                 logger.debug(fname + "=" + value + ", validator=" + rname);
-                if (!validator.execute(object, type, value, rule)) {
+                if (!validator.execute(object, type, value, rule))
+                {
                     results.put(fname, rule.getMessage());
-                    if(!checkAll) return results;
+                    if (!checkAll)
+                        return results;
                 }
             }
         }

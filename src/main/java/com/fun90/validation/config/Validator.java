@@ -1,15 +1,10 @@
-/*
- * 文件名：Validator.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.config;
 
 /**
  * 验证器配置<br>
  * name是指验证器名称(全局唯一), className是指验证器class全名
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class Validator {

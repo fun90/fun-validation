@@ -1,8 +1,3 @@
-/*
- * 文件名：TimestampLessEqualValidator.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.validators;
 
 import com.fun90.validation.IValidator;
@@ -16,7 +11,7 @@ import java.sql.Timestamp;
 /**
  * 当前时间需要小于等于
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class TimestampLessEqualValidator implements IValidator {
@@ -31,10 +26,8 @@ public class TimestampLessEqualValidator implements IValidator {
             return false;
         }
 
-        Object toValue = null;
         try {
-            toValue = PropertyUtils.getProperty(data, toName);
-            if (!(toValue instanceof Timestamp) || toValue == null) return false;
+            Object toValue = PropertyUtils.getProperty(data, toName);
             Timestamp timestamp = (Timestamp) value;
             Timestamp toTimestamp = (Timestamp) toValue;
             return timestamp.getTime() <= toTimestamp.getTime();

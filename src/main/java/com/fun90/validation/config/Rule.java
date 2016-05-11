@@ -1,8 +1,3 @@
-/*
- * 文件名：Rule.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.config;
 
 import java.util.HashMap;
@@ -12,7 +7,7 @@ import java.util.Map;
  * 验证规则<br>
  * name是指验证器的名称，message是指验证失败后的提示信息
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class Rule {

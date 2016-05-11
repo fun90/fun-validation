@@ -8,7 +8,7 @@ import org.apache.commons.beanutils.PropertyUtils;
  * 构造一个判断 参数 是否能够被 指定的值 整出的验证器
  * 例如：禁用的用户名不能通过验证
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-21
  */
 public class CustomValidator implements IValidator {
@@ -22,7 +22,7 @@ public class CustomValidator implements IValidator {
          */
         try {
             System.out.println("USERNAME = " + PropertyUtils.getProperty(data, "username"));
-        } catch (Exception e1) {
+        } catch (Exception ignored) {
         }
 
         /**

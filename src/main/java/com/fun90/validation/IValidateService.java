@@ -1,8 +1,3 @@
-/*
- * 文件名：IValidateService.java
- * 版权：Copyright 2015-2018 Kurrent Tech. Co. Ltd. All Rights Reserved. 
- * 描述：
- */
 package com.fun90.validation;
 
 import java.util.Map;
@@ -10,7 +5,7 @@ import java.util.Map;
 /**
  * 验证处理管理器
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public interface IValidateService {
@@ -21,5 +16,5 @@ public interface IValidateService {
      * @param groupId 验证组
      * @return 返回验证结果，如果数量为0，则表示正确无误
      */
-    public Map<String, String> validate(Object object, String groupId);
+    Map<String, String> validate(Object object, String groupId);
 }

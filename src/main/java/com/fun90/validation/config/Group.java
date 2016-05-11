@@ -1,8 +1,3 @@
-/*
- * 文件名：JsonPlugin.java
- * 版权：Copyright 2015-2018 Kurrent Tech. Co. Ltd. All Rights Reserved. 
- * 描述：
- */
 package com.fun90.validation.config;
 
 import java.util.ArrayList;
@@ -11,7 +6,7 @@ import java.util.List;
 /**
  * 验证组
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class Group {

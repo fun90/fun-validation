@@ -1,8 +1,3 @@
-/*
- * 文件名：BasicValidateConfig.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.config;
 
 import com.fun90.validation.IValidator;
@@ -23,13 +18,13 @@ import java.util.*;
 /**
  * 基础验证配置
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class BasicValidateConfig implements IValidateConfig {
     private static final Logger logger = LoggerFactory.getLogger(BasicValidateConfig.class);
 
-    private DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+    private final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
     private Document document;             // 主配置文件dom
     private String resource;               // 主配置文件路径
     private Configuration configuration;
@@ -72,7 +67,6 @@ public class BasicValidateConfig implements IValidateConfig {
 
         NodeList propertiesList = this.document.getElementsByTagName("properties");
         if (propertiesList != null && propertiesList.getLength() != 0) {
-            Element e = (Element) propertiesList.item(0);
             NodeList propertyList = ((Element) propertiesList.item(0)).getElementsByTagName("property");
             for(int i = 0; i < propertyList.getLength(); i++) {
                 Element element = (Element) propertyList.item(i);
@@ -145,7 +139,7 @@ public class BasicValidateConfig implements IValidateConfig {
      *
      * @return
      */
-    public Map<String, IValidator> readValidators() {
+    private Map<String, IValidator> readValidators() {
         logger.info("read validators file, " + this.resource);
         Map<String, IValidator> validators = new HashMap<String, IValidator>();
 
@@ -178,7 +172,7 @@ public class BasicValidateConfig implements IValidateConfig {
      *
      * @return
      */
-    public Map<String, List<Field>> readGroups() {
+    private Map<String, List<Field>> readGroups() {
         logger.info("read main groups file , " + this.getResource());
         Map<String, List<Field>> groups = new HashMap<String, List<Field>>();
 

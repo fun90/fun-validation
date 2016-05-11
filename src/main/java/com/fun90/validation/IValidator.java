@@ -1,8 +1,3 @@
-/*
- * 文件名：IValidator.java
- * 版权：Copyright 2015-2018 Kurrent Tech. Co. Ltd. All Rights Reserved. 
- * 描述：
- */
 package com.fun90.validation;
 
 import com.fun90.validation.config.Rule;
@@ -11,7 +6,7 @@ import com.fun90.validation.config.Rule;
  * 校验框架中的执行接口
  * 该接口为重要接口，处理每个验证的处理方法
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public interface IValidator {
@@ -25,5 +20,5 @@ public interface IValidator {
      * @param rule  验证规则
      * @return 是否成功
      */
-    public boolean execute(Object data, Class<?> type, Object value, Rule rule);
+    boolean execute(Object data, Class<?> type, Object value, Rule rule);
 }

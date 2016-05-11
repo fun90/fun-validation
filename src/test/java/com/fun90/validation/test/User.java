@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 /**
  * 用户对象
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class User {

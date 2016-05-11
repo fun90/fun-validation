@@ -1,8 +1,3 @@
-/*
- * 文件名：Field.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.config;
 
 import java.util.ArrayList;
@@ -12,7 +7,7 @@ import java.util.List;
  * 验证字段<br>
  * 包含字段名称、验证规则列表
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class Field {

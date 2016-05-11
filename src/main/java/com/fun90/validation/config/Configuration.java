@@ -1,8 +1,3 @@
-/*
- * 文件名：Configuration.java
- * 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
- *
- */
 package com.fun90.validation.config;
 
 import com.fun90.validation.IValidator;
@@ -14,7 +9,7 @@ import java.util.Properties;
 /**
  * 配置类
  *
- * @author xionglingcong
+ * @author fun90
  * @version V1.00 2015-7-20
  */
 public class Configuration {
@@ -68,10 +63,9 @@ public class Configuration {
     }
 
     /**
-     * 添加验证器
+     * 添加验证器组
      *
-     * @param name      验证器名称
-     * @param validator 验证器对象
+     * @param validators
      */
     public void addValidators(Map<String, IValidator> validators) {
         this.validators.putAll(validators);
