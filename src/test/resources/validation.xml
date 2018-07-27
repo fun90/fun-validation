@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  ~ 文件名：validation.xml
-  ~ 版权：Copyright 2011-2018 Kurrent Tech. Co. Ltd. All Rights Reserved.
-  ~
-  -->
-
 <validation xmlns="http://www.fun90.com/schema/fun-validation"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:schemaLocation="http://www.fun90.com/schema/fun-validation http://www.fun90.com/schema/fun-validation/fun90-validation-1.0.xsd">
